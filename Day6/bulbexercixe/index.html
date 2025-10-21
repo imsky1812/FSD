@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bulb{
+            border: 2px solid black;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+    <script>
+        function colorHandler(color){
+            const onoffButton=document.getElementById("on-off");
+            if(onoffButton.vlaue === "OFF"){
+                const bulb=document.getElementById("bulb");
+                bulb.style.backgroundColor= color;
+            }
+        }
+        function onoffHandler(value){
+            const onoffButton=document.getElementById("on-off");
+            (value==="ON") ? onoffButton.value="OFF" : onoffButton.value="ON";
+        }
+    </script>
+</head>
+<body>
+    <div id="bulb"> </div>
+        <input type="button" value="RED" onclick="colorHandler(value)">
+        <input type="button" value="BLACK" onclick="colorHandler(value)">
+        <input type="button" value="BLUE" onclick="colorHandler(value)">
+        <input type="button" value="GREEN" onclick="colorHandler(value)">
+        <br>
+        <input id="on-off" type="Button" value="ON" onclick="onoffHandler(value)">
+</body>
+</html>
